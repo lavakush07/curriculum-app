@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh '''ls -la
 echo "Hello Lavakush"'''
+        sh 'ls -la'
       }
     }
 
