@@ -8,10 +8,21 @@ pipeline {
     }
 
     stage('testing') {
-      steps {
-        sh '''ls -la
+      parallel {
+        stage('testing') {
+          steps {
+            sh '''ls -la
 echo "Hello Lavakush"'''
-        sh 'ls -la'
+            sh 'ls -la'
+          }
+        }
+
+        stage('testing-1') {
+          steps {
+            sh 'ls -la'
+          }
+        }
+
       }
     }
 
