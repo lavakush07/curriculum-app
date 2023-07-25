@@ -9,7 +9,7 @@ pipeline {
 
     stage('testing') {
       steps {
-        sh '''ls -al
+        sh '''ls -la
 echo "Hello Lavakush"'''
       }
     }
