@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('testing') {
+      steps {
+        sh '''ls -al
+echo "Hello Lavakush"'''
+      }
+    }
+
   }
 }
